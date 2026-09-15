@@ -4,4 +4,4 @@
 
 ## 프로젝트
 
-- [PetBalance 백엔드](https://github.com/WooAeyoung/backend)
+- [WooAeyoung 백엔드](https://github.com/WooAeyoung/backend)

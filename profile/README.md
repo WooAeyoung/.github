@@ -6,7 +6,8 @@
 
 | 서비스 | 용도 | 기술 |
 | --- | --- | --- |
-| **우애영 앱** | 반려동물 급여조합·영양소 분석 | React + Vite, Electron, FastAPI |
+| **우애영 웹 앱** | 반려동물 급여조합·영양소 분석 | React + Vite, FastAPI |
+| **우애영 설치형 앱** | 같은 웹 화면을 Electron으로 패키징 | Electron, PyInstaller |
 | **Spring Boot 백엔드** | 핵심 분석·인증·펫·제품·식단 API 이식 | Java, Spring Boot, SQLite |
 | **우애영 보호소** | 로스터·영양 경고·급여표·재고·예산 | Next.js, Vercel, Neon Postgres |
 
@@ -14,13 +15,13 @@
 
 ![우애영 서비스 아키텍처](./architecture.svg)
 
-우애영 앱은 브라우저에서 실행할 수 있고 Electron 데스크톱 창으로도 패키징됩니다. 현재 기본 분석 API는 FastAPI `:8756`이며, Spring Boot `:8757`은 핵심 흐름을 이식해 검증하고 있는 전환 백엔드입니다. 보호소 운영 웹은 별도 Next.js 서비스로 Vercel에 배포합니다.
+우애영 웹 앱은 브라우저에서 실행되는 React 화면입니다. 현재 기본 분석 API는 FastAPI `:8756`이며, Spring Boot `:8757`은 핵심 흐름을 이식해 검증하고 있는 전환 백엔드입니다. 같은 웹 화면은 Electron 데스크톱 앱으로도 패키징할 수 있습니다. 보호소 운영 웹은 별도 Next.js 서비스로 Vercel에 배포합니다.
 
-## 우애영 앱 화면
+## 우애영 웹 앱 화면
 
-![우애영 앱의 급여조합 화면](./app-screen.svg)
+![우애영 웹 앱의 영양소 분석 화면](./app-screen.svg)
 
-실제 앱 흐름은 다음과 같습니다.
+실제 웹 앱 흐름은 다음과 같습니다.
 
 `프로필` → `급여조합` → `영양소 분석` → `제품 추가`
 
@@ -36,7 +37,7 @@
 
 ## 배포
 
-- 브라우저 앱: FastAPI 서버가 정적 프론트엔드와 API를 함께 제공
+- 웹 앱: FastAPI 서버가 정적 프론트엔드와 API를 함께 제공
 - 설치형 앱: Electron + PyInstaller + electron-builder
 - 보호소 웹: Vercel 프로젝트 `shelter`, Neon Postgres 저장소
 - 임시 공유: Cloudflare Tunnel

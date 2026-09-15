@@ -13,13 +13,15 @@
 
 ## 아키텍처
 
-![우애영 서비스 아키텍처](./architecture.svg)
+![우애영 서비스 아키텍처](./architecture.svg?v=20260915)
 
 우애영 웹 앱은 브라우저에서 실행되는 React 화면입니다. 현재 기본 분석 API는 FastAPI `:8756`이며, Spring Boot `:8757`은 핵심 흐름을 이식해 검증하고 있는 전환 백엔드입니다. 같은 웹 화면은 Electron 데스크톱 앱으로도 패키징할 수 있습니다. 보호소 운영 웹은 별도 Next.js 서비스로 Vercel에 배포합니다.
 
 ## 우애영 웹 앱 화면
 
-![우애영 웹 앱의 영양소 분석 화면](./app-screen.svg)
+> 아래 이미지는 설치형 창이 아니라 브라우저에서 실행되는 **우애영 웹 앱 화면**입니다.
+
+![우애영 웹 앱의 영양소 분석 화면](./app-screen.svg?v=20260915)
 
 실제 웹 앱 흐름은 다음과 같습니다.
 
@@ -29,7 +31,7 @@
 
 ## 보호소 웹 화면
 
-![우애영 보호소의 로스터 화면](./shelter-screen.svg)
+![우애영 보호소의 로스터 화면](./shelter-screen.svg?v=20260915)
 
 보호소 직원은 접근 키로 로그인한 뒤 다음 운영 화면을 사용합니다.
 
@@ -44,6 +46,7 @@
 
 ## 프로젝트
 
+- [조직 프로필](https://github.com/WooAeyoung)
 - [조직 저장소](https://github.com/WooAeyoung)
 - [백엔드 저장소](https://github.com/WooAeyoung/backend)
 

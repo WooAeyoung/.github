@@ -13,7 +13,7 @@
 
 ## 아키텍처
 
-![우애영 서비스 아키텍처](https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/architecture.svg)
+![우애영 서비스 아키텍처](https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/architecture-v2.svg)
 
 우애영 웹 앱은 브라우저에서 실행되는 React 화면입니다. 기본 분석 API는 FastAPI `:8756`, 전환 검증 백엔드는 Spring Boot `:8757`입니다. 보호소 운영 웹은 별도 Next.js 서비스로 Vercel에 배포합니다.
 
@@ -22,12 +22,12 @@
 <table>
 <tr>
 <td width="25%" align="center"><img src="https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/login-screen.svg" alt="우애영 로그인 화면" /></td>
-<td width="25%" align="center"><img src="https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/app-screen.svg" alt="우애영 급여조합 화면" /></td>
+<td width="25%" align="center"><img src="https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/app-screen-v2.svg" alt="우애영 급여조합 화면" /></td>
 <td width="25%" align="center"><img src="https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/analysis-screen.svg" alt="우애영 영양소 분석 화면" /></td>
-<td width="25%" align="center"><img src="https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/shelter-screen.svg" alt="우애영 보호소 로스터 화면" /></td>
+<td width="25%" align="center"><img src="https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/shelter-screen-v2.svg" alt="우애영 보호소 로스터 화면" /></td>
 </tr>
 <tr>
-<td align="center"><b>로그인</b><br />이메일 계정으로 안전하게 시작합니다.</td>
+<td align="center"><b>로그인</b><br />이메일 계정으로 시작합니다.</td>
 <td align="center"><b>급여조합</b><br />사료·간식·영양제와 하루 급여량을 관리합니다.</td>
 <td align="center"><b>영양소 분석</b><br />총량과 참고 범위, 확인 필요 신호를 보여줍니다.</td>
 <td align="center"><b>보호소 로스터</b><br />동물·케이지·상태·영양 경고를 관리합니다.</td>

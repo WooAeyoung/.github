@@ -6,7 +6,7 @@
 
 ![우애영 서비스 아키텍처](./architecture.svg)
 
-우애영은 설치형 데스크톱 앱과 브라우저 웹 앱을 함께 제공합니다. React + Vite 화면은 FastAPI 분석 API와 SQLite 또는 영구 스토리지를 사용하며, Spring Boot 포트는 단계적 서버 전환을 위해 병행됩니다. 보호소 운영 웹은 별도 Next.js 앱으로 Vercel과 Neon Postgres에 배포합니다.
+우애영은 설치형 데스크톱 앱과 브라우저 웹 앱을 함께 제공합니다. React + Vite 화면은 현재 FastAPI 분석 API와 연결되며, Spring Boot 백엔드는 핵심 분석·인증·펫·제품·식단 흐름을 이식한 별도 포트로 병행 운영됩니다. 이후 프론트엔드 프록시를 Spring Boot로 전환할 수 있도록 두 백엔드의 계약을 검증하는 구조입니다. 보호소 운영 웹은 별도 Next.js 앱으로 Vercel과 Neon Postgres에 배포합니다.
 
 ## 우애영 앱
 
@@ -23,6 +23,13 @@
 ![우애영 보호소 운영 화면](./shelter-screen.svg)
 
 보호소 웹은 직원 전용 접근 키, 서버 저장, 동시 수정 감지 기능을 사용합니다.
+
+## 백엔드 구성
+
+- FastAPI: 기존 웹·데스크톱 앱의 기본 분석 API, `8756`
+- Spring Boot: 핵심 기능을 이식한 확장 백엔드, `8757`
+- SQLite: 로컬 계정·펫·제품·식단 저장
+- Neon Postgres: 보호소 운영 데이터 저장
 
 ## 프로젝트
 

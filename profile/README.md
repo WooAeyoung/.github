@@ -13,9 +13,15 @@
 
 ## 아키텍처
 
-![우애영 서비스 아키텍처](https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/architecture-v2.svg)
+![개인용 앱, Spring 전환 검증, 보호소 운영 웹의 독립적인 API·저장소 구조](./architecture-v3.svg)
 
-우애영 웹 앱은 브라우저에서 실행되는 React 화면입니다. 기본 분석 API는 FastAPI `:8756`, 전환 검증 백엔드는 Spring Boot `:8757`입니다. 보호소 운영 웹은 별도 Next.js 서비스로 Vercel에 배포합니다.
+세 영역은 각자의 API와 저장소를 사용합니다. 그림의 실선은 요청·저장 흐름을 나타냅니다.
+
+- **개인용 앱**: React + Vite 화면을 브라우저와 Electron에서 사용하며, 기본 API는 FastAPI `:8756`입니다. 로컬·영속 볼륨 환경에서는 SQLite, 클라우드 구성에서는 PostgreSQL을 사용합니다.
+- **Spring 전환 검증**: Spring Boot `:8757`은 핵심 기능을 이식한 별도 구현입니다. 독립 SQLite와 리소스 CSV를 사용하며, 기존 프론트와의 API 호환성을 검증하는 대상입니다.
+- **보호소 운영 웹**: Vercel의 Next.js 앱이 자체 Route Handlers와 Neon PostgreSQL로 상태를 저장합니다. 영양 계산은 브라우저의 TypeScript와 JSON 기준 데이터로 수행합니다.
+
+개인용 앱과 Spring은 제품·영양 기준 CSV를 참조합니다. 보호소는 공유 접근 키로 인증하고, `revision`으로 동시 수정 충돌을 감지합니다.
 
 ## 주요 화면
 

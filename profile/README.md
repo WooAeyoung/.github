@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | **우애영 웹 앱** | 급여조합·영양소 분석 | React + Vite, FastAPI |
 | **우애영 설치형 앱** | 같은 화면을 데스크톱으로 패키징 | Electron, PyInstaller |
+| **우애영 Android 앱** | 배포된 웹 서비스에 연결하는 모바일 앱 | Capacitor, Android |
 | **Spring Boot 백엔드** | 핵심 분석·인증·펫·제품·식단 API | Java, Spring Boot, SQLite |
 | **우애영 보호소** | 로스터·경고·급여표·재고·예산 | Next.js, Vercel, Neon Postgres |
 
@@ -17,7 +18,7 @@
 
 세 영역은 각자의 API와 저장소를 사용합니다. 그림의 실선은 요청·저장 흐름을 나타냅니다.
 
-- **개인용 앱**: React + Vite 화면을 브라우저와 Electron에서 사용하며, 기본 API는 FastAPI `:8756`입니다. 로컬·영속 볼륨 환경에서는 SQLite, 클라우드 구성에서는 PostgreSQL을 사용합니다.
+- **개인용 앱**: React + Vite 화면을 브라우저와 Electron에서 사용하며, Android 앱은 Capacitor로 배포된 HTTPS 서비스에 연결합니다. 기본 로컬 API는 FastAPI `:8756`입니다. 로컬·영속 볼륨 환경에서는 SQLite, 클라우드 구성에서는 PostgreSQL을 사용합니다.
 - **Spring 전환 검증**: Spring Boot `:8757`은 핵심 기능을 이식한 별도 구현입니다. 독립 SQLite와 리소스 CSV를 사용하며, 기존 프론트와의 API 호환성을 검증하는 대상입니다.
 - **보호소 운영 웹**: Vercel의 Next.js 앱이 자체 Route Handlers와 Neon PostgreSQL로 상태를 저장합니다. 영양 계산은 브라우저의 TypeScript와 JSON 기준 데이터로 수행합니다.
 
@@ -48,8 +49,9 @@
 
 ## 배포
 
-- 웹 앱: FastAPI 서버가 정적 프론트엔드와 API를 함께 제공
+- 웹 앱: FastAPI 서버가 정적 프론트엔드와 API를 함께 제공하며, Vercel + PostgreSQL 배포 구성을 지원
 - 설치형 앱: Electron + PyInstaller + electron-builder
+- Android 앱: Capacitor 기반으로 배포된 HTTPS 웹 서비스에 연결
 - 보호소 웹: Vercel 프로젝트 `shelter`, Neon Postgres 저장소
 - 임시 공유: Cloudflare Tunnel
 

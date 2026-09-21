@@ -60,6 +60,6 @@
 - [우애영 GitHub 조직](https://github.com/WooAeyoung)
 - [전체 저장소 목록](https://github.com/orgs/WooAeyoung/repositories)
 - [우애영 소스 코드 — 웹·앱·백엔드](https://github.com/WooAeyoung/backend)
-- [프런트엔드 — React 웹·Android 앱]([https://github.com/WooAeyoung/backend/tree/main/frontend](https://github.com/WooAeyoung/Frontend))
+- [프런트엔드 — React 웹·Android 앱](https://github.com/WooAeyoung/Frontend)
 
 > 현재 영양 기준·제품·가격 데이터는 기능 검증용 데모입니다. 실제 급여 판단이나 수의학적 처방을 대체하지 않습니다.

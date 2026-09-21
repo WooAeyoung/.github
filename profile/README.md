@@ -57,8 +57,8 @@
 
 ## 프로젝트
 
-- [조직 프로필](https://github.com/WooAeyoung)
-- [조직 저장소](https://github.com/WooAeyoung)
-- [백엔드 저장소](https://github.com/WooAeyoung/backend)
+- [우애영 GitHub 조직](https://github.com/WooAeyoung)
+- [전체 저장소 목록](https://github.com/orgs/WooAeyoung/repositories)
+- [우애영 소스 코드 — 웹·앱·백엔드](https://github.com/WooAeyoung/backend)
 
 > 현재 영양 기준·제품·가격 데이터는 기능 검증용 데모입니다. 실제 급여 판단이나 수의학적 처방을 대체하지 않습니다.

@@ -31,21 +31,6 @@ flowchart LR
 
 앱은 기기 안의 파일을 읽고, 새 급여 기록은 JSONL 또는 CSV 파일 끝에 추가합니다. 초기 버전은 서버·DB·로그인 없이 동작하며, 공유와 동기화가 필요한 시점에만 서버 저장소를 연결합니다.
 
-## 주요 화면
-
-<table>
-<tr>
-<td width="33%" align="center"><img src="https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/app-screen-v2.svg" alt="우애영 급여조합 화면" /></td>
-<td width="33%" align="center"><img src="https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/analysis-screen.svg" alt="우애영 영양소 분석 화면" /></td>
-<td width="33%" align="center"><img src="https://raw.githubusercontent.com/WooAeyoung/.github/main/profile/shelter-screen-v2.svg" alt="우애영 보호소 로스터 화면" /></td>
-</tr>
-<tr>
-<td align="center"><b>급여조합</b><br />사료·간식·영양제와 하루 급여량을 관리합니다.</td>
-<td align="center"><b>영양소 분석</b><br />총량과 참고 범위, 확인 필요 신호를 보여줍니다.</td>
-<td align="center"><b>보호소 로스터</b><br />동물·케이지·상태·영양 경고를 관리합니다.</td>
-</tr>
-</table>
-
 ## 운영 흐름
 
 `프로필 입력` → `급여 기록 추가` → `영양소 분석` → `파일에 이력 저장`

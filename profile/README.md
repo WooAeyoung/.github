@@ -46,6 +46,7 @@ flowchart LR
 ## 프로젝트
 
 - [우애영 GitHub 조직](https://github.com/WooAeyoung)
+- [GitHub 작업 봇 운영 설명](https://github.com/WooAeyoung/.github/blob/main/BOT.md)
 - [전체 저장소 목록](https://github.com/orgs/WooAeyoung/repositories)
 - [우애영 소스 코드 — 웹·앱·백엔드](https://github.com/WooAeyoung/backend)
 - [프런트엔드 — React 웹·Android 앱](https://github.com/WooAeyoung/Frontend)
